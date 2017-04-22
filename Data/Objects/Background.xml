@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<node id="16777217">
+	<attribute name="Is Enabled" value="true" />
+	<attribute name="Name" value="Background" />
+	<attribute name="Tags" />
+	<attribute name="Position" value="0 0 10" />
+	<attribute name="Rotation" value="1 0 0 0" />
+	<attribute name="Scale" value="0.5 0.5 1" />
+	<attribute name="Variables" />
+	<component type="StaticSprite2D" id="16777228">
+		<attribute name="Sprite" value="Sprite2D;Data/Urho2D/Background.png" />
+		<attribute name="Draw Rectangle" value="-20.48 -10.24 20.48 10.24" />
+		<attribute name="Texture Rectangle" value="0 1 1 0" />
+	</component>
+</node>

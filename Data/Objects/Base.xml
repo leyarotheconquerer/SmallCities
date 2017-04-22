@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<node id="16777218">
+	<attribute name="Is Enabled" value="true" />
+	<attribute name="Name" value="Base" />
+	<attribute name="Tags" />
+	<attribute name="Position" value="0 -2 9.24464" />
+	<attribute name="Rotation" value="1 0 0 0" />
+	<attribute name="Scale" value="0.5 0.5 1" />
+	<attribute name="Variables" />
+	<component type="StaticSprite2D" id="16777229">
+		<attribute name="Sprite" value="Sprite2D;Data/Urho2D/Base.png" />
+		<attribute name="Hot Spot" value="0.5 0" />
+		<attribute name="Use Hot Spot" value="true" />
+		<attribute name="Draw Rectangle" value="-5.12 -0 5.12 1.28" />
+		<attribute name="Texture Rectangle" value="0 1 1 0" />
+	</component>
+	<node id="16777219">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Attachments" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="StaticSprite2D" id="16777230">
+			<attribute name="View Mask" value="0" />
+			<attribute name="Sprite" value="Sprite2D;Data/Urho2D/BaseAttach.png" />
+			<attribute name="Draw Rectangle" value="-5.12 -0.64 5.12 0.64" />
+			<attribute name="Texture Rectangle" value="0 1 1 0" />
+		</component>
+	</node>
+</node>
