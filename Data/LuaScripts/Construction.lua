@@ -18,11 +18,15 @@ function HoldBuilding(type)
 		cache:GetResourceFileName(buildingPrefabs[type]),
 		Vector3(0, 0, 0),
 		Quaternion())
+	currentBuilding.scale = currentBuilding.scale * scaleFactor
 end
 
 function UpdateCurrentBuilding(timestep)
 	if currentBuilding ~= nil then
 		local converted = ScreenToWorld(input.mousePosition)
 		currentBuilding.position = converted
+	end
+
+	if input:GetMouseButtonPress(MOUSEB_LEFT) then
 	end
 end

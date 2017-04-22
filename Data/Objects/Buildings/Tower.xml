@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<node id="16777222">
+<node id="16777250">
 	<attribute name="Is Enabled" value="true" />
 	<attribute name="Name" value="Tower" />
 	<attribute name="Tags" />
@@ -7,24 +7,72 @@
 	<attribute name="Rotation" value="1 0 0 0" />
 	<attribute name="Scale" value="0.5 0.5 1" />
 	<attribute name="Variables" />
-	<component type="StaticSprite2D" id="16777235">
+	<component type="StaticSprite2D" id="16777286">
 		<attribute name="Sprite" value="Sprite2D;Data/Urho2D/Tower.png" />
 		<attribute name="Draw Rectangle" value="-0.64 -2.56 0.64 2.56" />
 		<attribute name="Texture Rectangle" value="0 1 1 0" />
 	</component>
-	<node id="16777223">
+	<node id="16777252">
 		<attribute name="Is Enabled" value="true" />
-		<attribute name="Name" value="Attachments" />
+		<attribute name="Name" value="Bases" />
 		<attribute name="Tags" />
 		<attribute name="Position" value="0 0 -1" />
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="1 1 1" />
 		<attribute name="Variables" />
-		<component type="StaticSprite2D" id="16777236">
-			<attribute name="View Mask" value="0" />
-			<attribute name="Sprite" value="Sprite2D;Data/Urho2D/TowerAttach.png" />
-			<attribute name="Draw Rectangle" value="-0.64 -2.56 0.64 2.56" />
-			<attribute name="Texture Rectangle" value="0 1 1 0" />
-		</component>
+		<node id="16777253">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="1" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 2 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="StaticSprite2D" id="16777288">
+				<attribute name="Sprite" value="Sprite2D;Data/Urho2D/BaseIndicator.png" />
+				<attribute name="Draw Rectangle" value="-0.64 -0.64 0.64 0.64" />
+				<attribute name="Texture Rectangle" value="0 1 1 0" />
+			</component>
+			<component type="CollisionBox2D" id="16777289">
+				<attribute name="Size" value="1.2 0.3" />
+				<attribute name="Center" value="0 0.5" />
+				<attribute name="Trigger" value="true" />
+				<attribute name="Category Bits" value="1" />
+				<attribute name="Mask Bits" value="65535" />
+			</component>
+			<component type="RigidBody2D" id="16777290">
+				<attribute name="Body Type" value="Kinematic" />
+			</component>
+		</node>
+	</node>
+	<node id="16777255">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Placements" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 0 -1" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<node id="16777256">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="1" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 -2 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="StaticSprite2D" id="16777294">
+				<attribute name="Sprite" value="Sprite2D;Data/Urho2D/PlacementIndicator.png" />
+				<attribute name="Draw Rectangle" value="-0.64 -0.64 0.64 0.64" />
+				<attribute name="Texture Rectangle" value="0 1 1 0" />
+			</component>
+			<component type="CollisionBox2D" id="16777295">
+				<attribute name="Size" value="1.2 0.3" />
+				<attribute name="Center" value="0 -0.5" />
+				<attribute name="Category Bits" value="1" />
+				<attribute name="Mask Bits" value="65535" />
+			</component>
+			<component type="RigidBody2D" id="16777296" />
+		</node>
 	</node>
 </node>

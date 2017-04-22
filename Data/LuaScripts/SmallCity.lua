@@ -1,4 +1,4 @@
-require("Data/LuaScripts/Buildings")
+require("Data/LuaScripts/BuildingUI")
 require("Data/LuaScripts/Construction")
 
 local BACKGROUND_SIZE = 2048;
@@ -6,6 +6,7 @@ local FOREGROUND_SIZE = 1024;
 scene_ = nil
 cameraNode_ = nil
 scaleFactor = 0
+debug_ = false
 
 function Start()
 	log:SetLevel(LOG_DEBUG)
@@ -16,6 +17,7 @@ function Start()
 	LoadLevel()
 
 	SubscribeToEvent("Update", "HandleUpdate")
+	SubscribeToEvent("PostRenderUpdate", "HandlePostRenderUpdate")
 end
 
 function Stop()
@@ -100,6 +102,20 @@ function HandleUpdate(type, data)
 	if input:GetKeyDown(KEY_ESCAPE) then
 		engine:Exit()
 	end
+	if input:GetKeyPress(KEY_F12) then
+		debug_ = not debug_
+		if debug_ then
+			log:Write(LOG_DEBUG, "Changing to true")
+		else
+			log:Write(LOG_DEBUG, "Changing to false")
+		end
+	end
 
 	UpdateCurrentBuilding(timestep)
+end
+
+function HandlePostRenderUpdate(type, data)
+	if debug_ then
+		scene_:GetComponent("PhysicsWorld2D"):DrawDebugGeometry(true)
+	end
 end

@@ -1,31 +1,72 @@
 <?xml version="1.0"?>
-<node id="16777220">
+<node id="16777266">
 	<attribute name="Is Enabled" value="true" />
 	<attribute name="Name" value="ClicheResidential" />
-	<attribute name="Tags" />
-	<attribute name="Position" value="0.611114 -3.66667 0" />
+	<attribute name="Tags">
+		<string value="Building" />
+	</attribute>
+	<attribute name="Position" value="2.60996 -1.37732 0" />
 	<attribute name="Rotation" value="1 0 0 0" />
 	<attribute name="Scale" value="0.5 0.5 1" />
 	<attribute name="Variables" />
-	<component type="StaticSprite2D" id="16777231">
+	<component type="StaticSprite2D" id="16777314">
 		<attribute name="Sprite" value="Sprite2D;Data/Urho2D/ClicheResidential.png" />
 		<attribute name="Draw Rectangle" value="-1.28 -1.28 1.28 1.28" />
 		<attribute name="Texture Rectangle" value="0 1 1 0" />
 	</component>
-	<node id="16777221">
+	<node id="16777267">
 		<attribute name="Is Enabled" value="true" />
-		<attribute name="Name" value="Attachments" />
+		<attribute name="Name" value="Placements" />
 		<attribute name="Tags" />
 		<attribute name="Position" value="0 0 -1" />
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="1 1 1" />
 		<attribute name="Variables" />
-		<component type="StaticSprite2D" id="16777232">
-			<attribute name="View Mask" value="0" />
-			<attribute name="Sprite" value="Sprite2D;Data/Urho2D/ClicheResidentialAttach.png" />
-			<attribute name="Use Hot Spot" value="true" />
-			<attribute name="Draw Rectangle" value="-1.28 -1.28 1.28 1.28" />
-			<attribute name="Texture Rectangle" value="0 1 1 0" />
-		</component>
+		<node id="16777268">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="1" />
+			<attribute name="Tags">
+				<string value="Placement" />
+			</attribute>
+			<attribute name="Position" value="-0.659723 -0.671297 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="StaticSprite2D" id="16777315">
+				<attribute name="Sprite" value="Sprite2D;Data/Urho2D/PlacementIndicator.png" />
+				<attribute name="Draw Rectangle" value="-0.64 -0.64 0.64 0.64" />
+				<attribute name="Texture Rectangle" value="0 1 1 0" />
+			</component>
+			<component type="CollisionBox2D" id="16777316">
+				<attribute name="Size" value="1.2 0.3" />
+				<attribute name="Center" value="0 -0.5" />
+				<attribute name="Category Bits" value="1" />
+				<attribute name="Mask Bits" value="65535" />
+			</component>
+			<component type="RigidBody2D" id="16777317" />
+		</node>
+		<node id="16777269">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="2" />
+			<attribute name="Tags">
+				<string value="Placement" />
+			</attribute>
+			<attribute name="Position" value="0.659721 -0.671297 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="StaticSprite2D" id="16777318">
+				<attribute name="Sprite" value="Sprite2D;Data/Urho2D/PlacementIndicator.png" />
+				<attribute name="Draw Rectangle" value="-0.64 -0.64 0.64 0.64" />
+				<attribute name="Texture Rectangle" value="0 1 1 0" />
+			</component>
+			<component type="CollisionBox2D" id="16777319">
+				<attribute name="Size" value="1.2 0.3" />
+				<attribute name="Center" value="0 -0.5" />
+				<attribute name="Category Bits" value="1" />
+				<attribute name="Mask Bits" value="65535" />
+			</component>
+			<component type="RigidBody2D" id="16777320" />
+		</node>
 	</node>
 </node>
