@@ -8,26 +8,9 @@ function Start()
 	log:SetLevel(LOG_DEBUG)
 	log:Write(LOG_DEBUG, "I'm alive!")
 
-	scaleFactor = (graphics.height * PIXEL_SIZE) / (BACKGROUND_SIZE * PIXEL_SIZE);
 	scene_ = SetupScene()
-
-	local background = scene_:InstantiateXML(
-		cache:GetResourceFileName("Objects/Background.xml"),
-		Vector3(0, 0, 10),
-		Quaternion())
-	background:SetScale2D(Vector2(scaleFactor, scaleFactor))
-
-	scaleFactor = (graphics.height * PIXEL_SIZE) / (FOREGROUND_SIZE * PIXEL_SIZE);
-	local base = scene_:InstantiateXML(
-		cache:GetResourceFileName("Objects/Base.xml"),
-		Vector3(0, -scaleFactor * 5.12, 5),
-		Quaternion())
-
-	local uiStyle = cache:GetResource("XMLFile", "UI/DefaultStyle.xml")
-	ui.root.defaultStyle = uiStyle
-
-	local hud = ui.root:CreateChild("Window")
-	hud:LoadXML(cache:GetResourceFileName("UI/HUD.xml"))
+	LoadUI()
+	LoadLevel()
 
 	SubscribeToEvent("Update", "HandleUpdate")
 end
@@ -52,6 +35,31 @@ function SetupScene()
 	renderer:SetViewport(0, viewport)
 
 	return scene;
+end
+
+function LoadLevel()
+	scaleFactor = (graphics.height * PIXEL_SIZE) / (BACKGROUND_SIZE * PIXEL_SIZE);
+	local background = scene_:InstantiateXML(
+		cache:GetResourceFileName("Objects/Background.xml"),
+		Vector3(0, 0, 10),
+		Quaternion())
+	background:SetScale2D(Vector2(scaleFactor, scaleFactor))
+
+	scaleFactor = (graphics.height * PIXEL_SIZE) / (FOREGROUND_SIZE * PIXEL_SIZE);
+	local base = scene_:InstantiateXML(
+		cache:GetResourceFileName("Objects/Base.xml"),
+		Vector3(0, -scaleFactor * 5.12, 5),
+		Quaternion())
+end
+
+function LoadUI()
+	local uiStyle = cache:GetResource("XMLFile", "UI/DefaultStyle.xml")
+	ui.root.defaultStyle = uiStyle
+
+	local hud = ui.root:CreateChild("Window")
+	hud:LoadXML(cache:GetResourceFileName("UI/HUD.xml"))
+
+	input.mouseVisible = true
 end
 
 function HandleUpdate(type, data)
