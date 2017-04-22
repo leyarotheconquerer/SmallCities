@@ -20,9 +20,14 @@ function Start()
 	scaleFactor = (graphics.height * PIXEL_SIZE) / (FOREGROUND_SIZE * PIXEL_SIZE);
 	local base = scene_:InstantiateXML(
 		cache:GetResourceFileName("Objects/Base.xml"),
-		-- Vector3(0, -2.5, 5),
 		Vector3(0, -scaleFactor * 5.12, 5),
 		Quaternion())
+
+	local uiStyle = cache:GetResource("XMLFile", "UI/DefaultStyle.xml")
+	ui.root.defaultStyle = uiStyle
+
+	local hud = ui.root:CreateChild("Window")
+	hud:LoadXML(cache:GetResourceFileName("UI/HUD.xml"))
 
 	SubscribeToEvent("Update", "HandleUpdate")
 end
