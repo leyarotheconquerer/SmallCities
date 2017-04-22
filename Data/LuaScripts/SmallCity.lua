@@ -1,4 +1,5 @@
 require("Data/LuaScripts/Buildings")
+require("Data/LuaScripts/Construction")
 
 local BACKGROUND_SIZE = 2048;
 local FOREGROUND_SIZE = 1024;
@@ -40,14 +41,14 @@ function SetupScene()
 end
 
 function LoadLevel()
-	scaleFactor = (graphics.height * PIXEL_SIZE) / (BACKGROUND_SIZE * PIXEL_SIZE);
+	scaleFactor = graphics.height / BACKGROUND_SIZE;
 	local background = scene_:InstantiateXML(
 		cache:GetResourceFileName("Objects/Background.xml"),
 		Vector3(0, 0, 10),
 		Quaternion())
 	background:SetScale2D(Vector2(scaleFactor, scaleFactor))
 
-	scaleFactor = (graphics.height * PIXEL_SIZE) / (FOREGROUND_SIZE * PIXEL_SIZE);
+	scaleFactor = graphics.height / FOREGROUND_SIZE;
 	local base = scene_:InstantiateXML(
 		cache:GetResourceFileName("Objects/Base.xml"),
 		Vector3(0, -scaleFactor * 5.12, 5),
@@ -74,6 +75,14 @@ function LoadUI()
 	input.mouseVisible = true
 end
 
+function ScreenToWorld(coordinates)
+	local converted = Vector3(
+		(coordinates.x - graphics.width * .5) * PIXEL_SIZE,
+		(graphics.height * .5 - coordinates.y) * PIXEL_SIZE,
+		0)
+	return converted
+end
+
 function HandleUpdate(type, data)
 	local timestep = data["TimeStep"]:GetFloat()
 	if input:GetKeyDown(KEY_DOWN) then
@@ -91,4 +100,6 @@ function HandleUpdate(type, data)
 	if input:GetKeyDown(KEY_ESCAPE) then
 		engine:Exit()
 	end
+
+	UpdateCurrentBuilding(timestep)
 end

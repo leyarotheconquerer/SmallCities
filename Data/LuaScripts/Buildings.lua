@@ -74,7 +74,7 @@ function HandleBuildingClick(type, data)
 		while (element ~= ui.root) do
 			element = element.parent
 			if (element:HasTag("Building")) then
-				log:Write(LOG_DEBUG, "Chose "..element.name)
+				HoldBuilding(element.name)
 			end
 		end
 	else
