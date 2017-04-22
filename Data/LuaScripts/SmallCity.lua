@@ -1,3 +1,5 @@
+require("Data/LuaScripts/Buildings")
+
 local BACKGROUND_SIZE = 2048;
 local FOREGROUND_SIZE = 1024;
 scene_ = nil
@@ -50,6 +52,7 @@ function LoadLevel()
 		cache:GetResourceFileName("Objects/Base.xml"),
 		Vector3(0, -scaleFactor * 5.12, 5),
 		Quaternion())
+	base.scale = base.scale * scaleFactor;
 end
 
 function LoadUI()
@@ -58,6 +61,15 @@ function LoadUI()
 
 	local hud = ui.root:CreateChild("Window")
 	hud:LoadXML(cache:GetResourceFileName("UI/HUD.xml"))
+
+	local scrollView = ui.root:GetChild("Buildings", true)
+	if scrollView ~= nil then
+		LoadBuildingUI(scrollView)
+
+		hud:SaveXML(cache:GetResourceFileName("UI/HUD2.xml"))
+	else
+		log:Write(LOG_DEBUG, "Couldn't find Buildings element")
+	end
 
 	input.mouseVisible = true
 end
