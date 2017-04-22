@@ -81,7 +81,7 @@ function ScreenToWorld(coordinates)
 	local converted = Vector3(
 		(coordinates.x - graphics.width * .5) * PIXEL_SIZE,
 		(graphics.height * .5 - coordinates.y) * PIXEL_SIZE,
-		0)
+		5)
 	return converted
 end
 
@@ -104,11 +104,6 @@ function HandleUpdate(type, data)
 	end
 	if input:GetKeyPress(KEY_F12) then
 		debug_ = not debug_
-		if debug_ then
-			log:Write(LOG_DEBUG, "Changing to true")
-		else
-			log:Write(LOG_DEBUG, "Changing to false")
-		end
 	end
 
 	UpdateCurrentBuilding(timestep)

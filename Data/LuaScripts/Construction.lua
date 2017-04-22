@@ -16,7 +16,7 @@ function HoldBuilding(type)
 
 	currentBuilding = scene_:InstantiateXML(
 		cache:GetResourceFileName(buildingPrefabs[type]),
-		Vector3(0, 0, 0),
+		Vector3(0, 0, 5),
 		Quaternion())
 	currentBuilding.scale = currentBuilding.scale * scaleFactor
 end

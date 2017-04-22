@@ -2,7 +2,9 @@
 <node id="16777218">
 	<attribute name="Is Enabled" value="true" />
 	<attribute name="Name" value="Base" />
-	<attribute name="Tags" />
+	<attribute name="Tags">
+		<string value="Building" />
+	</attribute>
 	<attribute name="Position" value="0 -4.93981 9.24464" />
 	<attribute name="Rotation" value="1 0 0 0" />
 	<attribute name="Scale" value="0.5 0.5 1" />
@@ -18,7 +20,7 @@
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Bases" />
 		<attribute name="Tags" />
-		<attribute name="Position" value="5.34955 9.80556 -10.2446" />
+		<attribute name="Position" value="5.34955 9.80556 -1" />
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="1 1 1" />
 		<attribute name="Variables" />
@@ -38,14 +40,17 @@
 				<attribute name="Texture Rectangle" value="0 1 1 0" />
 			</component>
 			<component type="CollisionBox2D" id="16777336">
-				<attribute name="Size" value="1.2 0.3" />
+				<attribute name="Size" value="0.5 0.3" />
 				<attribute name="Center" value="0 0.5" />
 				<attribute name="Trigger" value="true" />
 				<attribute name="Category Bits" value="1" />
 				<attribute name="Mask Bits" value="65535" />
 			</component>
 			<component type="RigidBody2D" id="16777337">
-				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Body Type" value="Dynamic" />
+				<attribute name="Mass" value="1" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
 			</component>
 		</node>
 		<node id="16777282">
@@ -64,14 +69,17 @@
 				<attribute name="Texture Rectangle" value="0 1 1 0" />
 			</component>
 			<component type="CollisionBox2D" id="16777339">
-				<attribute name="Size" value="1.2 0.3" />
+				<attribute name="Size" value="0.5 0.3" />
 				<attribute name="Center" value="0 0.5" />
 				<attribute name="Trigger" value="true" />
 				<attribute name="Category Bits" value="1" />
 				<attribute name="Mask Bits" value="65535" />
 			</component>
 			<component type="RigidBody2D" id="16777340">
-				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Body Type" value="Dynamic" />
+				<attribute name="Mass" value="1" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
 			</component>
 		</node>
 		<node id="16777285">
@@ -90,14 +98,17 @@
 				<attribute name="Texture Rectangle" value="0 1 1 0" />
 			</component>
 			<component type="CollisionBox2D" id="16777348">
-				<attribute name="Size" value="1.2 0.3" />
+				<attribute name="Size" value="0.5 0.3" />
 				<attribute name="Center" value="0 0.5" />
 				<attribute name="Trigger" value="true" />
 				<attribute name="Category Bits" value="1" />
 				<attribute name="Mask Bits" value="65535" />
 			</component>
 			<component type="RigidBody2D" id="16777349">
-				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Body Type" value="Dynamic" />
+				<attribute name="Mass" value="1" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
 			</component>
 		</node>
 		<node id="16777286">
@@ -116,14 +127,17 @@
 				<attribute name="Texture Rectangle" value="0 1 1 0" />
 			</component>
 			<component type="CollisionBox2D" id="16777351">
-				<attribute name="Size" value="1.2 0.3" />
+				<attribute name="Size" value="0.5 0.3" />
 				<attribute name="Center" value="0 0.5" />
 				<attribute name="Trigger" value="true" />
 				<attribute name="Category Bits" value="1" />
 				<attribute name="Mask Bits" value="65535" />
 			</component>
 			<component type="RigidBody2D" id="16777352">
-				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Body Type" value="Dynamic" />
+				<attribute name="Mass" value="1" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
 			</component>
 		</node>
 		<node id="16777287">
@@ -142,14 +156,17 @@
 				<attribute name="Texture Rectangle" value="0 1 1 0" />
 			</component>
 			<component type="CollisionBox2D" id="16777354">
-				<attribute name="Size" value="1.2 0.3" />
+				<attribute name="Size" value="0.5 0.3" />
 				<attribute name="Center" value="0 0.5" />
 				<attribute name="Trigger" value="true" />
 				<attribute name="Category Bits" value="1" />
 				<attribute name="Mask Bits" value="65535" />
 			</component>
 			<component type="RigidBody2D" id="16777355">
-				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Body Type" value="Dynamic" />
+				<attribute name="Mass" value="1" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
 			</component>
 		</node>
 		<node id="16777289">
@@ -168,14 +185,17 @@
 				<attribute name="Texture Rectangle" value="0 1 1 0" />
 			</component>
 			<component type="CollisionBox2D" id="16777360">
-				<attribute name="Size" value="1.2 0.3" />
+				<attribute name="Size" value="0.5 0.3" />
 				<attribute name="Center" value="0 0.5" />
 				<attribute name="Trigger" value="true" />
 				<attribute name="Category Bits" value="1" />
 				<attribute name="Mask Bits" value="65535" />
 			</component>
 			<component type="RigidBody2D" id="16777361">
-				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Body Type" value="Dynamic" />
+				<attribute name="Mass" value="1" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
 			</component>
 		</node>
 		<node id="16777290">
@@ -194,14 +214,17 @@
 				<attribute name="Texture Rectangle" value="0 1 1 0" />
 			</component>
 			<component type="CollisionBox2D" id="16777363">
-				<attribute name="Size" value="1.2 0.3" />
+				<attribute name="Size" value="0.5 0.3" />
 				<attribute name="Center" value="0 0.5" />
 				<attribute name="Trigger" value="true" />
 				<attribute name="Category Bits" value="1" />
 				<attribute name="Mask Bits" value="65535" />
 			</component>
 			<component type="RigidBody2D" id="16777364">
-				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Body Type" value="Dynamic" />
+				<attribute name="Mass" value="1" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
 			</component>
 		</node>
 		<node id="16777291">
@@ -220,14 +243,17 @@
 				<attribute name="Texture Rectangle" value="0 1 1 0" />
 			</component>
 			<component type="CollisionBox2D" id="16777366">
-				<attribute name="Size" value="1.2 0.3" />
+				<attribute name="Size" value="0.5 0.3" />
 				<attribute name="Center" value="0 0.5" />
 				<attribute name="Trigger" value="true" />
 				<attribute name="Category Bits" value="1" />
 				<attribute name="Mask Bits" value="65535" />
 			</component>
 			<component type="RigidBody2D" id="16777367">
-				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Body Type" value="Dynamic" />
+				<attribute name="Mass" value="1" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
 			</component>
 		</node>
 	</node>
