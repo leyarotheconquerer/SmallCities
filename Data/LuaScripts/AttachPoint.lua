@@ -62,6 +62,7 @@ end
 function AttachPoint:HandleMouseButtonDown(type, data)
 	log:Write(LOG_DEBUG, "Handling mouse click")
 	local success = false
+	local isPlacement = false
 	local myNode = self:FindBuilding(self.node)
 	if buildingsPlaced[myNode.ID] == nil then
 		if
@@ -72,6 +73,9 @@ function AttachPoint:HandleMouseButtonDown(type, data)
 			log:Write(LOG_DEBUG, myNode.name)
 			local one = activePlacements["1"]
 			local two = activePlacements["2"]
+			if one ~= nil and two ~= nil then
+				isPlacement = true
+			end
 			if (
 				one ~= nil and two ~= nil and                        -- Has two valid placements
 				(one.id ~= two.id or one.type == "Base") and         -- Doesn't share the same building (except bases)
@@ -92,20 +96,27 @@ function AttachPoint:HandleMouseButtonDown(type, data)
 				success = true
 			end
 		elseif
+			myNode.name == "Slant" or
+			myNode.name == "SlantLeft" or
 			myNode.name == "SlantResidential" or
 			myNode.name == "SlantResidentialLeft" or
 			myNode.name == "Tower" or
 			myNode.name == "Wedge" or
-			myNode.name == "WedgeLeft"
+			myNode.name == "WedgeLeft" or
+			myNode.name == "WedgeResidential" or
+			myNode.name == "WedgeResidential"
 		then
 			log:Write(LOG_DEBUG, myNode.name)
 			local one = activePlacements["1"]
+			if one ~= nil then
+				isPlacement = true
+			end
 			if (
 				one ~= nil and
 				(buildingPlacements[one.id] == nil or
 					buildingPlacements[one.id][one.base] == nil) and
 				headerInContact[myNode.ID] == nil
-			) then	
+			) then
 				if buildingPlacements[one.id] == nil then
 					buildingPlacements[one.id] = {}
 				end
@@ -125,6 +136,9 @@ function AttachPoint:HandleMouseButtonDown(type, data)
 		PlaySound("Sounds/Button.wav")
 		currentBuilding:Remove()
 		currentBuilding = nil
+	elseif isPlacement then
+		SpawnDialog("Placement")
+		PlaySound("Sounds/Fail.wav")
 	end
 end
 

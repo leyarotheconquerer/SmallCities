@@ -65,9 +65,9 @@ function LoadLevel()
 		Vector3(0, 0, 10),
 		Quaternion())
 	background:SetScale2D(Vector2(scaleFactor, scaleFactor))
-	local music = background:GetComponent("SoundSource")
-	music.soundType = "Music"
 	audio:SetMasterGain("Music", .5)
+	local music = background:CreateComponent("SoundSource")
+	music.soundType = "Music"
 	music:Play(cache:GetResource("Sound", "Sounds/Background.wav"))
 	SubscribeToEvent(background, "SoundFinished", "HandleMusicComplete")
 
