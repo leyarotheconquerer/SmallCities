@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<element type="Window">
+	<attribute name="Name" value="Tutorial3Dialog" />
+	<attribute name="Size" value="400 270" />
+	<attribute name="Min Anchor" value="0.5 0.5" />
+	<attribute name="Max Anchor" value="0.5 0.5" />
+	<attribute name="Pivot" value="0.5 0.5" />
+	<attribute name="Layout Spacing" value="10" />
+	<attribute name="Layout Border" value="0 0 0 10" />
+	<attribute name="Tags">
+		<string value="Dialog" />
+	</attribute>
+	<attribute name="Image Rect" value="16 0 32 16" />
+	<attribute name="Is Movable" value="true" />
+	<attribute name="Is Resizable" value="true" />
+	<element type="Window">
+		<attribute name="Name" value="Header" />
+		<attribute name="Size" value="400 19" />
+		<attribute name="Max Size" value="2147483647 19" />
+		<attribute name="Min Anchor" value="0.5 0" />
+		<attribute name="Max Anchor" value="0.5 0" />
+		<attribute name="Pivot" value="0.5 0" />
+		<attribute name="Layout Mode" value="Horizontal" />
+		<element type="Text">
+			<attribute name="Name" value="HeaderText" />
+			<attribute name="Pivot" value="0 0" />
+			<attribute name="Top Left Color" value="0.85 0.85 0.85 1" />
+			<attribute name="Top Right Color" value="0.85 0.85 0.85 1" />
+			<attribute name="Bottom Left Color" value="0.85 0.85 0.85 1" />
+			<attribute name="Bottom Right Color" value="0.85 0.85 0.85 1" />
+			<attribute name="Font Size" value="14" />
+			<attribute name="Text" value="Elephants" />
+			<attribute name="Text Alignment" value="Center" />
+		</element>
+		<element type="Button" style="CloseButton">
+			<attribute name="Name" value="Close" />
+			<attribute name="Min Anchor" value="0 0.5" />
+			<attribute name="Max Anchor" value="0 0.5" />
+			<attribute name="Pivot" value="0 0.5" />
+			<attribute name="Tags">
+				<string value="Close" />
+			</attribute>
+		</element>
+	</element>
+	<element type="Window">
+		<attribute name="Name" value="Body" />
+		<attribute name="Position" value="0 29" />
+		<attribute name="Size" value="400 300" />
+		<attribute name="Max Size" value="2147483647 300" />
+		<attribute name="Pivot" value="0 0" />
+		<attribute name="Layout Mode" value="Vertical" />
+		<attribute name="Image Rect" value="240 0 256 16" />
+		<element type="Text">
+			<attribute name="Name" value="BodyText" />
+			<attribute name="Min Anchor" value="0.5 0" />
+			<attribute name="Max Anchor" value="0.5 0" />
+			<attribute name="Pivot" value="0.5 0" />
+			<attribute name="Top Left Color" value="0.85 0.85 0.85 1" />
+			<attribute name="Top Right Color" value="0.85 0.85 0.85 1" />
+			<attribute name="Bottom Left Color" value="0.85 0.85 0.85 1" />
+			<attribute name="Bottom Right Color" value="0.85 0.85 0.85 1" />
+			<attribute name="Font Size" value="12" />
+			<attribute name="Text" value="Occasionally, your small city will be wiped out by an elephant, as often happens&#10;to small cities. A warning will be given in advance of an elephant, after which&#10;the elephant will demolish everything you've worked so hard to achieve.&#10;&#10;After an elephant stomps on your city, you will retain your population and will&#10;need to build buildings for them again before you can begin accumulating&#10;population again.&#10;" />
+			<attribute name="Text Alignment" value="Center" />
+			<attribute name="Word Wrap" value="true" />
+		</element>
+	</element>
+	<element type="Window">
+		<attribute name="Name" value="Footer" />
+		<attribute name="Position" value="0 220" />
+		<attribute name="Size" value="400 40" />
+		<attribute name="Pivot" value="0 0" />
+		<attribute name="Image Rect" value="240 0 256 16" />
+		<element type="Button">
+			<attribute name="Name" value="Close" />
+			<attribute name="Size" value="100 26" />
+			<attribute name="Min Anchor" value="0.5 1" />
+			<attribute name="Max Anchor" value="0.5 1" />
+			<attribute name="Pivot" value="0.5 1" />
+			<attribute name="Tags">
+				<string value="Close" />
+			</attribute>
+			<element type="Text">
+				<attribute name="Min Anchor" value="0.5 0.5" />
+				<attribute name="Max Anchor" value="0.5 0.5" />
+				<attribute name="Pivot" value="0.5 0.5" />
+				<attribute name="Top Left Color" value="0.85 0.85 0.85 1" />
+				<attribute name="Top Right Color" value="0.85 0.85 0.85 1" />
+				<attribute name="Bottom Left Color" value="0.85 0.85 0.85 1" />
+				<attribute name="Bottom Right Color" value="0.85 0.85 0.85 1" />
+				<attribute name="Text" value="Ok" />
+				<attribute name="Text Alignment" value="Center" />
+			</element>
+		</element>
+	</element>
+</element>

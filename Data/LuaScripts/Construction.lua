@@ -38,6 +38,7 @@ function HoldBuilding(type)
 			Quaternion())
 		currentBuilding.scale = currentBuilding.scale * scaleFactor
 	else
+		SpawnDialog("Costly")
 		log:Write(LOG_INFO, "Unable to select building, not enough population")
 	end
 end

@@ -1,6 +1,7 @@
 require("Data/LuaScripts/BuildingUI")
 require("Data/LuaScripts/Construction")
 require("Data/LuaScripts/Elephant")
+require("Data/LuaScripts/Dialogs")
 
 local BACKGROUND_SIZE = 2048;
 local FOREGROUND_SIZE = 1024;
@@ -21,6 +22,14 @@ function Start()
 	SubscribeToEvent("Update", "HandleUpdate")
 	SubscribeToEvent("PostRenderUpdate", "HandlePostRenderUpdate")
 	SubscribeToEvent("PhysicsCollisionStart", "HandleNodeCollisionStart")
+
+	SpawnDialog("Tutorial1", function()
+		SpawnDialog("Tutorial2", function()
+			SpawnDialog("Tutorial3", function()
+				SpawnDialog("Tutorial4")
+			end)
+		end)
+	end)
 end
 
 function HandleNodeCollisionStart(type, data)
@@ -75,8 +84,6 @@ function LoadUI()
 	local scrollView = ui.root:GetChild("Buildings", true)
 	if scrollView ~= nil then
 		LoadBuildingUI(scrollView)
-
-		hud:SaveXML(cache:GetResourceFileName("UI/HUD2.xml"))
 	else
 		log:Write(LOG_DEBUG, "Couldn't find Buildings element")
 	end

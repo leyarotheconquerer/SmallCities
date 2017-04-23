@@ -3,6 +3,7 @@ Elephant = ScriptObject()
 elephantTurn = 0
 turnCounter = 0
 dayOfTheElephant = false
+elephantDialog = false
 
 denialPhrases = {
 	"What Elephant?",
@@ -19,6 +20,10 @@ function NextTurn()
 	turnCounter = turnCounter + 1
 
 	if elephantTurn - turnCounter <= 4 then
+		if not elephantDialog then
+			SpawnDialog("Elephant")
+			elephantDialog = true
+		end
 		local titleText = ui.root:GetChild("Title", true)
 		titleText.text = "ELEPHANT! ("..elephantTurn - turnCounter..")"
 		log:Write(LOG_WARNING, "The elephant's arrival is imminent. Bleeeeaaaugh!!!!")
@@ -57,6 +62,7 @@ function Elephant:UpdateDayOfTheElephant(type, data)
 		buildingPopulation = 0
 		population = totalPopulation
 		dayOfTheElephant = false
+		elephantDialog = false
 		turnCounter = 0
 		elephantTurn = 0
 
