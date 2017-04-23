@@ -78,7 +78,8 @@ function AttachPoint:HandleMouseButtonDown(type, data)
 				(buildingPlacements[one.id] == nil or                -- First slot isn't already taken up
 					buildingPlacements[one.id][one.base] == nil) and
 				(buildingPlacements[two.id] == nil or                -- Second slot isn't already taken up
-					buildingPlacements[two.id][two.base] == nil)
+					buildingPlacements[two.id][two.base] == nil) and
+				headerInContact[myNode.ID] == nil
 			) then
 				if buildingPlacements[one.id] == nil then
 					buildingPlacements[one.id] = {}
@@ -102,8 +103,9 @@ function AttachPoint:HandleMouseButtonDown(type, data)
 			if (
 				one ~= nil and
 				(buildingPlacements[one.id] == nil or
-					buildingPlacements[one.id][one.base] == nil)
-			) then
+					buildingPlacements[one.id][one.base] == nil) and
+				headerInContact[myNode.ID] == nil
+			) then	
 				if buildingPlacements[one.id] == nil then
 					buildingPlacements[one.id] = {}
 				end

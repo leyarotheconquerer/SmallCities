@@ -1,24 +1,24 @@
 <?xml version="1.0"?>
-<node id="16777220">
+<node id="16777450">
 	<attribute name="Is Enabled" value="true" />
 	<attribute name="Name" value="SimpleResidential" />
 	<attribute name="Tags">
 		<string value="Building" />
 	</attribute>
-	<attribute name="Position" value="2.67477 -0.0370355 0" />
+	<attribute name="Position" value="4.50704 -0.755243 5.37277" />
 	<attribute name="Rotation" value="1 0 0 0" />
 	<attribute name="Scale" value="0.5 0.5 1" />
 	<attribute name="Variables" />
-	<component type="StaticSprite2D" id="16777231">
+	<component type="StaticSprite2D" id="16777684">
 		<attribute name="Sprite" value="Sprite2D;Data/Urho2D/SimpleResidential.png" />
 		<attribute name="Draw Rectangle" value="-1.28 -1.28 1.28 1.28" />
 		<attribute name="Texture Rectangle" value="0 1 1 0" />
 	</component>
-	<component type="LuaScriptInstance" id="16777378">
+	<component type="LuaScriptInstance" id="16777685">
 		<attribute name="Script File" value="LuaFile;Data/LuaScripts/Building.lua" />
 		<attribute name="Script Object Type" value="Building" />
 	</component>
-	<node id="16777226">
+	<node id="16777451">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Placements" />
 		<attribute name="Tags" />
@@ -26,7 +26,7 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="1 1 1" />
 		<attribute name="Variables" />
-		<node id="16777227">
+		<node id="16777452">
 			<attribute name="Is Enabled" value="true" />
 			<attribute name="Name" value="1" />
 			<attribute name="Tags">
@@ -36,30 +36,30 @@
 			<attribute name="Rotation" value="1 0 0 0" />
 			<attribute name="Scale" value="1 1 1" />
 			<attribute name="Variables" />
-			<component type="StaticSprite2D" id="16777239">
+			<component type="StaticSprite2D" id="16777686">
 				<attribute name="Sprite" value="Sprite2D;Data/Urho2D/PlacementIndicator.png" />
 				<attribute name="Draw Rectangle" value="-0.64 -0.64 0.64 0.64" />
 				<attribute name="Texture Rectangle" value="0 1 1 0" />
 			</component>
-			<component type="CollisionBox2D" id="16777247">
+			<component type="CollisionBox2D" id="16777687">
 				<attribute name="Size" value="0.5 0.3" />
 				<attribute name="Center" value="0 -0.5" />
 				<attribute name="Trigger" value="true" />
 				<attribute name="Category Bits" value="1" />
 				<attribute name="Mask Bits" value="65535" />
 			</component>
-			<component type="RigidBody2D" id="16777248">
+			<component type="RigidBody2D" id="16777688">
 				<attribute name="Body Type" value="Dynamic" />
 				<attribute name="Mass" value="1" />
 				<attribute name="Allow Sleep" value="false" />
 				<attribute name="Gravity Scale" value="0" />
 			</component>
-			<component type="LuaScriptInstance" id="16777369">
+			<component type="LuaScriptInstance" id="16777689">
 				<attribute name="Script File" value="LuaFile;Data/LuaScripts/AttachPoint.lua" />
 				<attribute name="Script Object Type" value="AttachPoint" />
 			</component>
 		</node>
-		<node id="16777230">
+		<node id="16777453">
 			<attribute name="Is Enabled" value="true" />
 			<attribute name="Name" value="2" />
 			<attribute name="Tags">
@@ -69,28 +69,55 @@
 			<attribute name="Rotation" value="1 0 0 0" />
 			<attribute name="Scale" value="1 1 1" />
 			<attribute name="Variables" />
-			<component type="StaticSprite2D" id="16777249">
+			<component type="StaticSprite2D" id="16777690">
 				<attribute name="Sprite" value="Sprite2D;Data/Urho2D/PlacementIndicator.png" />
 				<attribute name="Draw Rectangle" value="-0.64 -0.64 0.64 0.64" />
 				<attribute name="Texture Rectangle" value="0 1 1 0" />
 			</component>
-			<component type="CollisionBox2D" id="16777250">
+			<component type="CollisionBox2D" id="16777691">
 				<attribute name="Size" value="0.5 0.3" />
 				<attribute name="Center" value="0 -0.5" />
 				<attribute name="Trigger" value="true" />
 				<attribute name="Category Bits" value="1" />
 				<attribute name="Mask Bits" value="65535" />
 			</component>
-			<component type="RigidBody2D" id="16777251">
+			<component type="RigidBody2D" id="16777692">
 				<attribute name="Body Type" value="Dynamic" />
 				<attribute name="Mass" value="1" />
 				<attribute name="Allow Sleep" value="false" />
 				<attribute name="Gravity Scale" value="0" />
 			</component>
-			<component type="LuaScriptInstance" id="16777372">
+			<component type="LuaScriptInstance" id="16777693">
 				<attribute name="Script File" value="LuaFile;Data/LuaScripts/AttachPoint.lua" />
 				<attribute name="Script Object Type" value="AttachPoint" />
 			</component>
 		</node>
+	</node>
+	<node id="16777474">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Header" />
+		<attribute name="Tags">
+			<string value="Header" />
+		</attribute>
+		<attribute name="Position" value="0 1.11222 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="CollisionBox2D" id="16777735">
+			<attribute name="Size" value="2 0.3" />
+			<attribute name="Trigger" value="true" />
+			<attribute name="Category Bits" value="1" />
+			<attribute name="Mask Bits" value="65535" />
+		</component>
+		<component type="RigidBody2D" id="16777736">
+			<attribute name="Body Type" value="Dynamic" />
+			<attribute name="Mass" value="1" />
+			<attribute name="Allow Sleep" value="false" />
+			<attribute name="Gravity Scale" value="0" />
+		</component>
+		<component type="LuaScriptInstance" id="16777737">
+			<attribute name="Script File" value="LuaFile;Data/LuaScripts/Header.lua" />
+			<attribute name="Script Object Type" value="Header" />
+		</component>
 	</node>
 </node>
