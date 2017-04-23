@@ -120,6 +120,7 @@ function AttachPoint:HandleMouseButtonDown(type, data)
 		activePlacements = {}
 		buildingsPlaced[myNode.ID] = true
 		PlaceBuilding(myNode.name, currentBuilding.position)
+		PlaySound("Sounds/Button.wav")
 		currentBuilding:Remove()
 		currentBuilding = nil
 	end

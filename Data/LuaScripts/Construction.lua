@@ -39,6 +39,7 @@ function HoldBuilding(type)
 		currentBuilding.scale = currentBuilding.scale * scaleFactor
 	else
 		SpawnDialog("Costly")
+		PlaySound("Sounds/Fail.wav")
 		log:Write(LOG_INFO, "Unable to select building, not enough population")
 	end
 end

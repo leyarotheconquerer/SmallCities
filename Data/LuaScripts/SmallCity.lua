@@ -65,6 +65,11 @@ function LoadLevel()
 		Vector3(0, 0, 10),
 		Quaternion())
 	background:SetScale2D(Vector2(scaleFactor, scaleFactor))
+	local music = background:GetComponent("SoundSource")
+	music:Play(cache:GetResource("Sound", "Sounds/Background.wav"))
+	music.soundType = "Music"
+	audio:SetMasterGain("Music", .5)
+	SubscribeToEvent(background, "SoundFinished", "HandleMusicComplete")
 
 	scaleFactor = graphics.height / FOREGROUND_SIZE;
 	local base = scene_:InstantiateXML(
@@ -129,4 +134,22 @@ function HandlePostRenderUpdate(type, data)
 	if debug_ then
 		scene_:GetComponent("PhysicsWorld2D"):DrawDebugGeometry(true)
 	end
+end
+
+function HandleMusicComplete(type, data)
+	log:Write(LOG_DEBUG, "Music has finished, restarting")
+	local node = data["Node"]:Get("Node")
+	if node ~= nil then
+		local source = node:CreateComponent("SoundSource")
+		source:Play(cache:GetResource("Sound", "Sounds/Background.wav"))
+	else
+		log:Write(LOG_DEBUG, "Sound source not found")
+	end
+end
+
+function PlaySound(file)
+	local soundNode = scene_:CreateChild("Sound")
+	local soundSource = soundNode:CreateComponent("SoundSource")
+	soundSource:Play(cache:GetResource("Sound", file))
+	soundSource.autoRemove = true
 end
