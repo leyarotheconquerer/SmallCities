@@ -99,3 +99,11 @@ function HandleBuildingClick(type, data)
 		log:Write(LOG_DEBUG, "There's no element here")
 	end
 end
+
+function UpdateStatsUI()
+	local populationText = ui.root:GetChild("Population", true):GetChild("Text")
+	populationText.text = population
+
+	local totalText = ui.root:GetChild("Total", true):GetChild("Text")
+	totalText.text = totalPopulation
+end

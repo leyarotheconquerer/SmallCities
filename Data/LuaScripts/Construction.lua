@@ -23,16 +23,20 @@ buildingPopulation = 0
 totalPopulation = 0
 
 function HoldBuilding(type)
-	if currentBuilding ~= nil then
-		currentBuilding:Remove()
-		currentBuilding = nil
-	end
+	if population >= buildings[type].cost then
+		if currentBuilding ~= nil then
+			currentBuilding:Remove()
+			currentBuilding = nil
+		end
 
-	currentBuilding = scene_:InstantiateXML(
-		cache:GetResourceFileName(buildingPrefabs[type]),
-		Vector3(0, 0, 5),
-		Quaternion())
-	currentBuilding.scale = currentBuilding.scale * scaleFactor
+		currentBuilding = scene_:InstantiateXML(
+			cache:GetResourceFileName(activeBuildingPrefabs[type]),
+			Vector3(0, 0, 5),
+			Quaternion())
+		currentBuilding.scale = currentBuilding.scale * scaleFactor
+	else
+		log:Write(LOG_INFO, "Unable to select building, not enough population")
+	end
 end
 
 function UpdateCurrentBuilding(timestep)
@@ -46,6 +50,12 @@ function UpdateCurrentBuilding(timestep)
 end
 
 function PlaceBuilding(type, location)
+	population = population + buildings[type].population - buildings[type].cost
+	buildingPopulation = buildingPopulation + buildings[type].population
+	if buildingPopulation > totalPopulation then
+		totalPopulation = buildingPopulation
+	end
+
 	newBuilding = scene_:InstantiateXML(
 		cache:GetResourceFileName(buildingPrefabs[type]),
 		location,

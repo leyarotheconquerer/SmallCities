@@ -112,6 +112,7 @@ function HandleUpdate(type, data)
 		debug_ = not debug_
 	end
 
+	UpdateStatsUI(timestep)
 	UpdateCurrentBuilding(timestep)
 end
 

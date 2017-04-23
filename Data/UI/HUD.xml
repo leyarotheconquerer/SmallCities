@@ -49,6 +49,7 @@
 				<attribute name="Text Alignment" value="Center" />
 			</element>
 			<element type="Text">
+				<attribute name="Name" value="Text" />
 				<attribute name="Pivot" value="0 0" />
 				<attribute name="Top Left Color" value="0.85 0.85 0.85 1" />
 				<attribute name="Top Right Color" value="0.85 0.85 0.85 1" />
@@ -78,6 +79,7 @@
 				<attribute name="Text Alignment" value="Center" />
 			</element>
 			<element type="Text">
+				<attribute name="Name" value="Text" />
 				<attribute name="Pivot" value="0 0" />
 				<attribute name="Top Left Color" value="0.85 0.85 0.85 1" />
 				<attribute name="Top Right Color" value="0.85 0.85 0.85 1" />
@@ -151,7 +153,7 @@
 			<attribute name="Pivot" value="0 0" />
 			<element>
 				<attribute name="Name" value="Buildings" />
-				<attribute name="Size" value="160 380" />
+				<attribute name="Size" value="160 180" />
 				<attribute name="Pivot" value="0 0" />
 				<attribute name="Layout Mode" value="Vertical" />
 				<attribute name="Layout Spacing" value="10" />
