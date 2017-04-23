@@ -14,6 +14,10 @@
 		<attribute name="Draw Rectangle" value="-1.28 -1.28 1.28 1.28" />
 		<attribute name="Texture Rectangle" value="0 1 1 0" />
 	</component>
+	<component type="LuaScriptInstance" id="16777380">
+		<attribute name="Script File" value="LuaFile;Data/LuaScripts/Building.lua" />
+		<attribute name="Script Object Type" value="Building" />
+	</component>
 	<node id="16777267">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Placements" />
@@ -49,6 +53,10 @@
 				<attribute name="Mass" value="1" />
 				<attribute name="Gravity Scale" value="0" />
 			</component>
+			<component type="LuaScriptInstance" id="16777376">
+				<attribute name="Script File" value="LuaFile;Data/LuaScripts/AttachPoint.lua" />
+				<attribute name="Script Object Type" value="AttachPoint" />
+			</component>
 		</node>
 		<node id="16777269">
 			<attribute name="Is Enabled" value="true" />
@@ -76,6 +84,10 @@
 				<attribute name="Body Type" value="Dynamic" />
 				<attribute name="Mass" value="1" />
 				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="LuaScriptInstance" id="16777377">
+				<attribute name="Script File" value="LuaFile;Data/LuaScripts/AttachPoint.lua" />
+				<attribute name="Script Object Type" value="AttachPoint" />
 			</component>
 		</node>
 	</node>

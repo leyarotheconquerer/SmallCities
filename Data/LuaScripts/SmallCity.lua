@@ -3,6 +3,7 @@ require("Data/LuaScripts/Construction")
 
 local BACKGROUND_SIZE = 2048;
 local FOREGROUND_SIZE = 1024;
+
 scene_ = nil
 cameraNode_ = nil
 scaleFactor = 0
@@ -18,6 +19,11 @@ function Start()
 
 	SubscribeToEvent("Update", "HandleUpdate")
 	SubscribeToEvent("PostRenderUpdate", "HandlePostRenderUpdate")
+	SubscribeToEvent("PhysicsCollisionStart", "HandleNodeCollisionStart")
+end
+
+function HandleNodeCollisionStart(type, data)
+	log:Write(LOG_DEBUG, "Generic event handle")
 end
 
 function Stop()

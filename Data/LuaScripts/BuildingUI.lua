@@ -1,8 +1,10 @@
 buildingOrder = {
 	"SimpleResidential",
 	"Slant",
+	"SlantLeft",
 	"Tower",
 	"WedgeResidential",
+	"WedgeResidentialLeft",
 	"ClicheResidential",
 }
 buildings = {
@@ -22,6 +24,14 @@ buildings = {
 		population = 0,
 		cost = 1
 	},
+	SlantLeft = {
+		name = "Slant Left",
+		image = "Urho2D/SlantLeft.png",
+		imageWidth = 256,
+		imageHeight = 256,
+		population = 0,
+		cost = 1
+	},
 	Tower = {
 		name = "Tower",
 		image = "Urho2D/Tower.png",
@@ -33,6 +43,14 @@ buildings = {
 	WedgeResidential = {
 		name = "Wedge Residential",
 		image = "Urho2D/WedgeResidential.png",
+		imageWidth = 256,
+		imageHeight = 256,
+		population = 1,
+		cost = 2
+	},
+	WedgeResidentialLeft = {
+		name = "Wedge Residential Left",
+		image = "Urho2D/WedgeResidentialLeft.png",
 		imageWidth = 256,
 		imageHeight = 256,
 		population = 1,
