@@ -51,6 +51,7 @@
 			<component type="RigidBody2D" id="16777418">
 				<attribute name="Body Type" value="Dynamic" />
 				<attribute name="Mass" value="1" />
+				<attribute name="Allow Sleep" value="false" />
 				<attribute name="Gravity Scale" value="0" />
 			</component>
 		</node>
@@ -79,6 +80,7 @@
 			<component type="RigidBody2D" id="16777421">
 				<attribute name="Body Type" value="Dynamic" />
 				<attribute name="Mass" value="1" />
+				<attribute name="Allow Sleep" value="false" />
 				<attribute name="Gravity Scale" value="0" />
 			</component>
 		</node>
