@@ -66,9 +66,9 @@ function LoadLevel()
 		Quaternion())
 	background:SetScale2D(Vector2(scaleFactor, scaleFactor))
 	local music = background:GetComponent("SoundSource")
-	music:Play(cache:GetResource("Sound", "Sounds/Background.wav"))
 	music.soundType = "Music"
 	audio:SetMasterGain("Music", .5)
+	music:Play(cache:GetResource("Sound", "Sounds/Background.wav"))
 	SubscribeToEvent(background, "SoundFinished", "HandleMusicComplete")
 
 	scaleFactor = graphics.height / FOREGROUND_SIZE;

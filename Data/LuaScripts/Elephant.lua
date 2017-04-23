@@ -44,6 +44,7 @@ function Elephant:Start()
 	self.progress = 0.0
 	self.rate = 6
 	self:SubscribeToEvent("Update", "Elephant:UpdateDayOfTheElephant")
+	PlaySound("Sounds/Elephant.wav")
 	log:Write(LOG_DEBUG, "I have arrived")
 end
 
