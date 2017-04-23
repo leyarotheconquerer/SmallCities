@@ -55,45 +55,4 @@
 			</component>
 		</node>
 	</node>
-	<node id="16777295">
-		<attribute name="Is Enabled" value="true" />
-		<attribute name="Name" value="Placements" />
-		<attribute name="Tags" />
-		<attribute name="Position" value="0 0 -1" />
-		<attribute name="Rotation" value="1 0 0 0" />
-		<attribute name="Scale" value="1 1 1" />
-		<attribute name="Variables" />
-		<node id="16777296">
-			<attribute name="Is Enabled" value="true" />
-			<attribute name="Name" value="1" />
-			<attribute name="Tags">
-				<string value="Placement" />
-			</attribute>
-			<attribute name="Position" value="0.738577 -0.671297 0" />
-			<attribute name="Rotation" value="1 0 0 0" />
-			<attribute name="Scale" value="1 1 1" />
-			<attribute name="Variables" />
-			<component type="StaticSprite2D" id="16777388">
-				<attribute name="Sprite" value="Sprite2D;Data/Urho2D/PlacementIndicator.png" />
-				<attribute name="Draw Rectangle" value="-0.64 -0.64 0.64 0.64" />
-				<attribute name="Texture Rectangle" value="0 1 1 0" />
-			</component>
-			<component type="CollisionBox2D" id="16777389">
-				<attribute name="Size" value="0.5 0.3" />
-				<attribute name="Center" value="0 -0.5" />
-				<attribute name="Trigger" value="true" />
-				<attribute name="Category Bits" value="1" />
-				<attribute name="Mask Bits" value="65535" />
-			</component>
-			<component type="RigidBody2D" id="16777390">
-				<attribute name="Body Type" value="Dynamic" />
-				<attribute name="Mass" value="1" />
-				<attribute name="Gravity Scale" value="0" />
-			</component>
-			<component type="LuaScriptInstance" id="16777391">
-				<attribute name="Script File" value="LuaFile;Data/LuaScripts/AttachPoint.lua" />
-				<attribute name="Script Object Type" value="AttachPoint" />
-			</component>
-		</node>
-	</node>
 </node>

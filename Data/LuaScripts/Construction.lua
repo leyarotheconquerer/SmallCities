@@ -1,3 +1,12 @@
+activeBuildingPrefabs = {
+	SimpleResidential = "Objects/ActiveBuildings/SimpleResidential.xml",
+	Slant = "Objects/ActiveBuildings/Slant.xml",
+	SlantLeft = "Objects/ActiveBuildings/SlantLeft.xml",
+	Tower = "Objects/ActiveBuildings/Tower.xml",
+	WedgeResidential = "Objects/ActiveBuildings/WedgeResidential.xml",
+	WedgeResidentialLeft = "Objects/ActiveBuildings/WedgeResidentialLeft.xml",
+	ClicheResidential = "Objects/ActiveBuildings/ClicheResidential.xml",
+}
 buildingPrefabs = {
 	SimpleResidential = "Objects/Buildings/SimpleResidential.xml",
 	Slant = "Objects/Buildings/Slant.xml",
@@ -37,5 +46,9 @@ function UpdateCurrentBuilding(timestep)
 end
 
 function PlaceBuilding(type, location)
-	
+	newBuilding = scene_:InstantiateXML(
+		cache:GetResourceFileName(buildingPrefabs[type]),
+		location,
+		Quaternion())
+	newBuilding.scale = newBuilding.scale * scaleFactor
 end
