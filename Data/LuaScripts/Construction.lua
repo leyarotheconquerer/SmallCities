@@ -18,6 +18,7 @@ buildingPrefabs = {
 }
 
 currentBuilding = nil
+buildingRoot = nil
 population = 0
 buildingPopulation = 0
 totalPopulation = 0
@@ -50,10 +51,15 @@ function UpdateCurrentBuilding(timestep)
 end
 
 function PlaceBuilding(type, location)
-	population = population + buildings[type].population - buildings[type].cost
+	population = population - buildings[type].cost
 	buildingPopulation = buildingPopulation + buildings[type].population
 	if buildingPopulation > totalPopulation then
+		population = population + buildings[type].population
 		totalPopulation = buildingPopulation
+	end
+
+	if buildingRoot == nil then
+		buildingRoot = scene_:CreateChild("BuildingRoot")
 	end
 
 	newBuilding = scene_:InstantiateXML(
@@ -61,4 +67,5 @@ function PlaceBuilding(type, location)
 		location,
 		Quaternion())
 	newBuilding.scale = newBuilding.scale * scaleFactor
+	newBuilding:SetParent(buildingRoot)
 end
