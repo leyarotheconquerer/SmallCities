@@ -93,6 +93,13 @@ function LoadUI()
 		log:Write(LOG_DEBUG, "Couldn't find Buildings element")
 	end
 
+	local summonElephant = ui.root:CreateChild("Button")
+	summonElephant:LoadXML(cache:GetResourceFileName("UI/SummonElephant.xml"))
+	summonElephant.style = "Button"
+	SubscribeToEvent(summonElephant, "Pressed", function(type, data)
+		SummonElephant()
+	end)
+
 	input.mouseVisible = true
 end
 

@@ -30,14 +30,18 @@ function NextTurn()
 	end
 
 	if elephantTurn <= turnCounter then
-		log:Write(LOG_WARNING, "Behold, our doom is now. The elephant has arrived.")
-		dayOfTheElephant = true
-		elephant = scene_:InstantiateXML(
-			cache:GetResourceFileName("Objects/Elephant.xml"),
-			Vector3(0, scaleFactor * 5.12, 0),
-			Quaternion())
-		elephant.scale = elephant.scale * scaleFactor
+		SummonElephant()
 	end
+end
+
+function SummonElephant()
+	log:Write(LOG_WARNING, "Behold, our doom is now. The elephant has arrived.")
+	dayOfTheElephant = true
+	elephant = scene_:InstantiateXML(
+		cache:GetResourceFileName("Objects/Elephant.xml"),
+		Vector3(0, scaleFactor * 5.12, 0),
+		Quaternion())
+	elephant.scale = elephant.scale * scaleFactor
 end
 
 function Elephant:Start()
