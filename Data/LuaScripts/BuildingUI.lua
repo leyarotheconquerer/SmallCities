@@ -2,9 +2,9 @@ buildingOrder = {
 	"SimpleResidential",
 	"SlantResidential",
 	"SlantResidentialLeft",
+	"Tower",
 	"Wedge",
 	"WedgeLeft",
-	"Tower",
 	"ClicheResidential",
 	"DoubleResidential",
 }
@@ -39,7 +39,7 @@ buildings = {
 		imageWidth = 256,
 		imageHeight = 256,
 		population = 0,
-		cost = 1
+		cost = 2
 	},
 	WedgeLeft = {
 		name = "Wedge Left",
@@ -47,7 +47,7 @@ buildings = {
 		imageWidth = 256,
 		imageHeight = 256,
 		population = 0,
-		cost = 1
+		cost = 2
 	},
 	Tower = {
 		name = "Tower",
@@ -63,7 +63,7 @@ buildings = {
 		imageWidth = 256,
 		imageHeight = 512,
 		population = 4,
-		cost = 3
+		cost = 6
 	},
 	ClicheResidential = {
 		name = "Cliche Residential",
@@ -71,7 +71,7 @@ buildings = {
 		imageWidth = 256,
 		imageHeight = 256,
 		population = 4,
-		cost = 2
+		cost = 3
 	},
 }
 
