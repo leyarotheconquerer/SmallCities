@@ -1,6 +1,6 @@
 Elephant = ScriptObject()
 
-elephantTurn = 2
+elephantTurn = 0
 turnCounter = 0
 dayOfTheElephant = false
 

@@ -64,7 +64,11 @@ function AttachPoint:HandleMouseButtonDown(type, data)
 	local success = false
 	local myNode = self:FindBuilding(self.node)
 	if buildingsPlaced[myNode.ID] == nil then
-		if myNode.name == "SimpleResidential" or myNode.name == "ClicheResidential" then
+		if
+			myNode.name == "SimpleResidential" or
+			myNode.name == "ClicheResidential" or
+			myNode.name == "DoubleResidential"
+		then
 			log:Write(LOG_DEBUG, myNode.name)
 			local one = activePlacements["1"]
 			local two = activePlacements["2"]
@@ -87,11 +91,11 @@ function AttachPoint:HandleMouseButtonDown(type, data)
 				success = true
 			end
 		elseif
-			myNode.name == "Slant" or
-			myNode.name == "SlantLeft" or
+			myNode.name == "SlantResidential" or
+			myNode.name == "SlantResidentialLeft" or
 			myNode.name == "Tower" or
-			myNode.name == "WedgeResidential" or
-			myNode.name == "WedgeResidentialLeft"
+			myNode.name == "Wedge" or
+			myNode.name == "WedgeLeft"
 		then
 			log:Write(LOG_DEBUG, myNode.name)
 			local one = activePlacements["1"]

@@ -1,11 +1,12 @@
 buildingOrder = {
 	"SimpleResidential",
-	"Slant",
-	"SlantLeft",
+	"SlantResidential",
+	"SlantResidentialLeft",
+	"Wedge",
+	"WedgeLeft",
 	"Tower",
-	"WedgeResidential",
-	"WedgeResidentialLeft",
 	"ClicheResidential",
+	"DoubleResidential",
 }
 buildings = {
 	SimpleResidential = {
@@ -16,17 +17,33 @@ buildings = {
 		population = 1,
 		cost = 0
 	},
-	Slant = {
-		name = "Slant",
-		image = "Urho2D/Slant.png",
+	SlantResidential = {
+		name = "Slant Residential",
+		image = "Urho2D/SlantResidential.png",
+		imageWidth = 256,
+		imageHeight = 256,
+		population = 1,
+		cost = 1
+	},
+	SlantResidentialLeft = {
+		name = "Slant Residential Left",
+		image = "Urho2D/SlantResidentialLeft.png",
+		imageWidth = 256,
+		imageHeight = 256,
+		population = 1,
+		cost = 1
+	},
+	Wedge = {
+		name = "Wedge",
+		image = "Urho2D/Wedge.png",
 		imageWidth = 256,
 		imageHeight = 256,
 		population = 0,
 		cost = 1
 	},
-	SlantLeft = {
-		name = "Slant Left",
-		image = "Urho2D/SlantLeft.png",
+	WedgeLeft = {
+		name = "Wedge Left",
+		image = "Urho2D/WedgeLeft.png",
 		imageWidth = 256,
 		imageHeight = 256,
 		population = 0,
@@ -40,21 +57,13 @@ buildings = {
 		population = 0,
 		cost = 1
 	},
-	WedgeResidential = {
-		name = "Wedge Residential",
-		image = "Urho2D/WedgeResidential.png",
+	DoubleResidential = {
+		name = "Double Residential",
+		image = "Urho2D/DoubleResidential.png",
 		imageWidth = 256,
-		imageHeight = 256,
-		population = 1,
-		cost = 2
-	},
-	WedgeResidentialLeft = {
-		name = "Wedge Residential Left",
-		image = "Urho2D/WedgeResidentialLeft.png",
-		imageWidth = 256,
-		imageHeight = 256,
-		population = 1,
-		cost = 2
+		imageHeight = 512,
+		population = 4,
+		cost = 3
 	},
 	ClicheResidential = {
 		name = "Cliche Residential",
@@ -63,7 +72,7 @@ buildings = {
 		imageHeight = 256,
 		population = 4,
 		cost = 2
-	}
+	},
 }
 
 function LoadBuildingUI(scrollView)

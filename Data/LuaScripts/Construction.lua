@@ -1,20 +1,22 @@
 activeBuildingPrefabs = {
 	SimpleResidential = "Objects/ActiveBuildings/SimpleResidential.xml",
-	Slant = "Objects/ActiveBuildings/Slant.xml",
-	SlantLeft = "Objects/ActiveBuildings/SlantLeft.xml",
+	SlantResidential = "Objects/ActiveBuildings/SlantResidential.xml",
+	SlantResidentialLeft = "Objects/ActiveBuildings/SlantResidentialLeft.xml",
 	Tower = "Objects/ActiveBuildings/Tower.xml",
-	WedgeResidential = "Objects/ActiveBuildings/WedgeResidential.xml",
-	WedgeResidentialLeft = "Objects/ActiveBuildings/WedgeResidentialLeft.xml",
-	ClicheResidential = "Objects/ActiveBuildings/ClicheResidential.xml",
+	Wedge = "Objects/ActiveBuildings/Wedge.xml",
+	WedgeLeft = "Objects/ActiveBuildings/WedgeLeft.xml",
+	DoubleResidential = "Objects/ActiveBuildings/DoubleResidential.xml",
+	ClicheResidential = "Objects/ActiveBuildings/ClicheResidential.xml"
 }
 buildingPrefabs = {
 	SimpleResidential = "Objects/Buildings/SimpleResidential.xml",
-	Slant = "Objects/Buildings/Slant.xml",
-	SlantLeft = "Objects/Buildings/SlantLeft.xml",
+	SlantResidential = "Objects/Buildings/SlantResidential.xml",
+	SlantResidentialLeft = "Objects/Buildings/SlantResidentialLeft.xml",
 	Tower = "Objects/Buildings/Tower.xml",
-	WedgeResidential = "Objects/Buildings/WedgeResidential.xml",
-	WedgeResidentialLeft = "Objects/Buildings/WedgeResidentialLeft.xml",
-	ClicheResidential = "Objects/Buildings/ClicheResidential.xml",
+	Wedge = "Objects/Buildings/Wedge.xml",
+	WedgeLeft = "Objects/Buildings/WedgeLeft.xml",
+	DoubleResidential = "Objects/Buildings/DoubleResidential.xml",
+	ClicheResidential = "Objects/Buildings/ClicheResidential.xml"
 }
 
 currentBuilding = nil
