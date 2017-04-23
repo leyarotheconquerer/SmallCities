@@ -1,5 +1,6 @@
 require("Data/LuaScripts/BuildingUI")
 require("Data/LuaScripts/Construction")
+require("Data/LuaScripts/Elephant")
 
 local BACKGROUND_SIZE = 2048;
 local FOREGROUND_SIZE = 1024;
@@ -111,9 +112,10 @@ function HandleUpdate(type, data)
 	if input:GetKeyPress(KEY_F12) then
 		debug_ = not debug_
 	end
-
-	UpdateStatsUI(timestep)
-	UpdateCurrentBuilding(timestep)
+	if not dayOfTheElephant then
+		UpdateStatsUI(timestep)
+		UpdateCurrentBuilding(timestep)
+	end
 end
 
 function HandlePostRenderUpdate(type, data)

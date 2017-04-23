@@ -51,6 +51,7 @@ function UpdateCurrentBuilding(timestep)
 end
 
 function PlaceBuilding(type, location)
+	log:Write(LOG_DEBUG, "population="..population..",building="..buildingPopulation..",total="..totalPopulation.."(cost="..buildings[type].cost..",add="..buildings[type].population..")")
 	population = population - buildings[type].cost
 	buildingPopulation = buildingPopulation + buildings[type].population
 	if buildingPopulation > totalPopulation then
@@ -68,4 +69,6 @@ function PlaceBuilding(type, location)
 		Quaternion())
 	newBuilding.scale = newBuilding.scale * scaleFactor
 	newBuilding:SetParent(buildingRoot)
+
+	NextTurn()
 end
