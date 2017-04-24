@@ -55,6 +55,8 @@ function SetupScene()
 	local viewport = Viewport:new(scene, cameraNode_:GetComponent("Camera"))
 	renderer:SetViewport(0, viewport)
 
+	graphics:SetWindowTitle("Small Cities")
+
 	return scene;
 end
 
