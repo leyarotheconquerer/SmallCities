@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<node id="16777476">
+	<attribute name="Is Enabled" value="true" />
+	<attribute name="Name" value="Explosion1" />
+	<attribute name="Tags" />
+	<attribute name="Position" value="0 0 0" />
+	<attribute name="Rotation" value="1 0 0 0" />
+	<attribute name="Scale" value="1 1 1" />
+	<attribute name="Variables" />
+	<component type="ParticleEmitter" id="16777741">
+		<attribute name="Effect" value="ParticleEffect;Data/Particles/ElephantCarnage1.xml" />
+		<attribute name="Animation LOD Bias" value="0" />
+		<attribute name="Is Emitting" value="true" />
+		<attribute name="Emission Timer" value="-0.071232" />
+		<attribute name="Particles">
+			<variant type="Int" value="10" />
+			<variant type="Vector3" value="1.07506 -3.99162 1.38353" />
+			<variant type="Vector2" value="0.5 0.5" />
+			<variant type="Float" value="1.00907" />
+			<variant type="Float" value="1" />
+			<variant type="Float" value="1" />
+			<variant type="Float" value="0" />
+			<variant type="Int" value="0" />
+			<variant type="Int" value="0" />
+			<variant type="Vector3" value="-1.00368 -2.07964 -1.45806" />
+			<variant type="Vector2" value="0.5 0.5" />
+			<variant type="Float" value="1.00353" />
+			<variant type="Float" value="1" />
+			<variant type="Float" value="1" />
+			<variant type="Float" value="0" />
+			<variant type="Int" value="0" />
+			<variant type="Int" value="0" />
+			<variant type="Vector3" value="-0.805849 -3.45556 -1.77641" />
+			<variant type="Vector2" value="0.5 0.5" />
+			<variant type="Float" value="1.00466" />
+			<variant type="Float" value="1" />
+			<variant type="Float" value="1" />
+			<variant type="Float" value="0" />
+			<variant type="Int" value="0" />
+			<variant type="Int" value="0" />
+			<variant type="Vector3" value="0.166061 -2.3564 1.88611" />
+			<variant type="Vector2" value="0.5 0.5" />
+			<variant type="Float" value="1.0002" />
+			<variant type="Float" value="1" />
+			<variant type="Float" value="1" />
+			<variant type="Float" value="0" />
+			<variant type="Int" value="0" />
+			<variant type="Int" value="0" />
+			<variant type="Vector3" value="-0.83333 -1.50636 -1.03338" />
+			<variant type="Vector2" value="0.5 0.5" />
+			<variant type="Float" value="1.00075" />
+			<variant type="Float" value="1" />
+			<variant type="Float" value="1" />
+			<variant type="Float" value="0" />
+			<variant type="Int" value="0" />
+			<variant type="Int" value="0" />
+			<variant type="Vector3" value="1.09191 -2.51536 1.60385" />
+			<variant type="Vector2" value="0.5 0.5" />
+			<variant type="Float" value="1.00018" />
+			<variant type="Float" value="1" />
+			<variant type="Float" value="1" />
+			<variant type="Float" value="0" />
+			<variant type="Int" value="0" />
+			<variant type="Int" value="0" />
+			<variant type="Vector3" value="1.52678 -3.01775 -1.29186" />
+			<variant type="Vector2" value="0.5 0.5" />
+			<variant type="Float" value="1.00372" />
+			<variant type="Float" value="1" />
+			<variant type="Float" value="1" />
+			<variant type="Float" value="0" />
+			<variant type="Int" value="0" />
+			<variant type="Int" value="0" />
+			<variant type="Vector3" value="-0.00248226 -1.77049 -1.56882" />
+			<variant type="Vector2" value="0.5 0.5" />
+			<variant type="Float" value="1.00366" />
+			<variant type="Float" value="1" />
+			<variant type="Float" value="1" />
+			<variant type="Float" value="0" />
+			<variant type="Int" value="0" />
+			<variant type="Int" value="0" />
+			<variant type="Vector3" value="-1.3157 -3.37736 -1.45827" />
+			<variant type="Vector2" value="0.5 0.5" />
+			<variant type="Float" value="1.00001" />
+			<variant type="Float" value="1" />
+			<variant type="Float" value="1" />
+			<variant type="Float" value="0" />
+			<variant type="Int" value="0" />
+			<variant type="Int" value="0" />
+			<variant type="Vector3" value="1.23899 -3.84372 -1.33209" />
+			<variant type="Vector2" value="0.5 0.5" />
+			<variant type="Float" value="1.00426" />
+			<variant type="Float" value="1" />
+			<variant type="Float" value="1" />
+			<variant type="Float" value="0" />
+			<variant type="Int" value="0" />
+			<variant type="Int" value="0" />
+		</attribute>
+		<attribute name="Billboards">
+			<variant type="Int" value="10" />
+			<variant type="Vector3" value="1.08481 -2.51412 1.39608" />
+			<variant type="Vector2" value="0.5 0.5" />
+			<variant type="Vector4" value="0 0 1 1" />
+			<variant type="Color" value="1 1 1 1" />
+			<variant type="Float" value="0" />
+			<variant type="Vector3" value="0.246616 -0.915669 0.31738" />
+			<variant type="Bool" value="false" />
+			<variant type="Vector3" value="-1.00722 -0.589958 -1.46321" />
+			<variant type="Vector2" value="0.5 0.5" />
+			<variant type="Vector4" value="0 0 1 1" />
+			<variant type="Color" value="1 1 1 1" />
+			<variant type="Float" value="0" />
+			<variant type="Vector3" value="-0.367517 -0.761501 -0.533898" />
+			<variant type="Bool" value="false" />
+			<variant type="Vector3" value="-0.809605 -1.9714 -1.78469" />
+			<variant type="Vector2" value="0.5 0.5" />
+			<variant type="Vector4" value="0 0 1 1" />
+			<variant type="Color" value="1 1 1 1" />
+			<variant type="Float" value="0" />
+			<variant type="Vector3" value="-0.203081 -0.870833 -0.44767" />
+			<variant type="Bool" value="false" />
+			<variant type="Vector3" value="0.166094 -0.86989 1.88649" />
+			<variant type="Vector2" value="0.5 0.5" />
+			<variant type="Vector4" value="0 0 1 1" />
+			<variant type="Color" value="1 1 1 1" />
+			<variant type="Float" value="0" />
+			<variant type="Vector3" value="0.0549351 -0.779529 0.623952" />
+			<variant type="Bool" value="false" />
+			<variant type="Vector3" value="-0.833955 -0.019099 -1.03415" />
+			<variant type="Vector2" value="0.5 0.5" />
+			<variant type="Vector4" value="0 0 1 1" />
+			<variant type="Color" value="1 1 1 1" />
+			<variant type="Float" value="0" />
+			<variant type="Vector3" value="-0.415038 -0.750237 -0.514672" />
+			<variant type="Bool" value="false" />
+			<variant type="Vector3" value="1.0921 -1.03144 1.60414" />
+			<variant type="Vector2" value="0.5 0.5" />
+			<variant type="Vector4" value="0 0 1 1" />
+			<variant type="Color" value="1 1 1 1" />
+			<variant type="Float" value="0" />
+			<variant type="Vector3" value="0.343721 -0.791806 0.504875" />
+			<variant type="Bool" value="false" />
+			<variant type="Vector3" value="1.53245 -1.53388 -1.29667" />
+			<variant type="Vector2" value="0.5 0.5" />
+			<variant type="Vector4" value="0 0 1 1" />
+			<variant type="Color" value="1 1 1 1" />
+			<variant type="Float" value="0" />
+			<variant type="Vector3" value="0.421723 -0.833557 -0.356836" />
+			<variant type="Bool" value="false" />
+			<variant type="Vector3" value="-0.00249134 -0.282035 -1.57456" />
+			<variant type="Vector2" value="0.5 0.5" />
+			<variant type="Vector4" value="0 0 1 1" />
+			<variant type="Color" value="1 1 1 1" />
+			<variant type="Float" value="0" />
+			<variant type="Vector3" value="-0.00104934 -0.748446 -0.663195" />
+			<variant type="Bool" value="false" />
+			<variant type="Vector3" value="-1.31571 -1.89315 -1.45828" />
+			<variant type="Vector2" value="0.5 0.5" />
+			<variant type="Vector4" value="0 0 1 1" />
+			<variant type="Color" value="1 1 1 1" />
+			<variant type="Float" value="0" />
+			<variant type="Vector3" value="-0.33676 -0.864452 -0.37325" />
+			<variant type="Bool" value="false" />
+			<variant type="Vector3" value="1.24427 -2.36266 -1.33777" />
+			<variant type="Vector2" value="0.5 0.5" />
+			<variant type="Vector4" value="0 0 1 1" />
+			<variant type="Color" value="1 1 1 1" />
+			<variant type="Float" value="0" />
+			<variant type="Vector3" value="0.291355 -0.903873 -0.313249" />
+			<variant type="Bool" value="false" />
+		</attribute>
+	</component>
+</node>

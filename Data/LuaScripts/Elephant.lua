@@ -11,6 +11,16 @@ denialPhrases = {
 	"Small City",
 	"Lack of Elephant"
 }
+carnagePrefabs = {
+	"Objects/Carnage/Explosion1.xml",
+	"Objects/Carnage/Explosion2.xml",
+	"Objects/Carnage/Explosion3.xml",
+	"Objects/Carnage/Explosion4.xml",
+	"Objects/Carnage/Explosion5.xml",
+	"Objects/Carnage/Explosion6.xml",
+	"Objects/Carnage/Explosion7.xml",
+	"Objects/Carnage/Explosion8.xml",
+}
 
 function NextTurn()
 	if elephantTurn <= 0 then
@@ -48,6 +58,7 @@ function Elephant:Start()
 	self.progress = 0.0
 	self.rate = 6
 	self:SubscribeToEvent("Update", "Elephant:UpdateDayOfTheElephant")
+	self:SubscribeToEvent(self.node, "NodeBeginContact2D", "Elephant:HandleNodeBeginContact2D")
 	PlaySound("Sounds/Elephant.wav")
 	log:Write(LOG_DEBUG, "I have arrived")
 end
@@ -79,8 +90,28 @@ function Elephant:UpdateDayOfTheElephant(type, data)
 
 		self.rate = 3
 		self:UnsubscribeFromEvent("Update")
+		self:UnsubscribeFromEvent(self.node, "NodeBeginContact2D")
 		self:SubscribeToEvent("Update", "Elephant:RetractFoot")
 	end
+end
+
+function Elephant:HandleNodeBeginContact2D(type, data)
+	local collisionPoint = data["ContactPoints"]:Get("Vector2")
+	for i,v in pairs(collisionPoint) do
+		log:Write(LOG_DEBUG,
+			"Spawning explosion at "..i.."="..v..", ")
+	end
+	local explosion = scene_:CreateChild("Explosion")
+	local index = RandomInt(1, table.getn(carnagePrefabs))
+	explosion = scene_:InstantiateXML(
+		cache:GetResourceFileName(carnagePrefabs[index]),
+		Vector3(collisionPoint.x, collisionPoint.y, 0),
+		Quaternion())
+	SubscribeToEvent(explosion, "ParticleEffectFinished", function(type, data)
+		log:Write(LOG_DEBUG, "Particle effect finished. Deleting node")
+		local node = data["Node"]:Get("Node")
+		node:Remove()
+	end)
 end
 
 function Elephant:RetractFoot(type, data)
@@ -90,6 +121,6 @@ function Elephant:RetractFoot(type, data)
 		self.node:Translate2D(Vector2(0, timestep * scaleFactor * self.rate))
 	else
 		self:UnsubscribeFromEvent("Update")
-		self:Remove()
+		self.node:Remove()
 	end
 end
