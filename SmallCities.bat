@@ -1,1 +1,1 @@
-%~dp0\Urho3DPlayer %~dp0Data\LuaScripts\SmallCity.lua -w -pp %~dp0
+"%~dp0\Urho3DPlayer" "%~dp0Data\LuaScripts\SmallCity.lua" -w -pp "%~dp0"
